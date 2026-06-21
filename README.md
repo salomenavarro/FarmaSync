@@ -74,7 +74,6 @@ Abre `index.html` directamente en tu navegador (doble clic), o usa la extensión
 
 **Diseño:** libre. Puedes usar tarjetas, íconos emoji o SVG, grid o flex, el fondo que prefieras. Usa las variables de color del proyecto para mantener coherencia.
 
-**Animaciones:** usa `data-aos` en las tarjetas para que aparezcan al hacer scroll. Si son varias en fila, ponles `data-aos-delay` escalonado para que entren una por una.
 
 
 
