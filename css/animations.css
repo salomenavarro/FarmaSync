@@ -1,0 +1,78 @@
+/* ============================================
+   FARMASYNC — Animaciones
+   ============================================
+
+   CÓMO ESTÁ ORGANIZADO ESTE ARCHIVO:
+   1. @keyframes  →  definen el "guión" de la animación
+   2. Clases CSS  →  aplican ese guión a elementos HTML
+   3. AOS         →  librería externa para animar al hacer scroll
+   4. Accesibilidad → respeta usuarios con sensibilidad al movimiento
+
+   ─────────────────────────────────────────────
+
+   ¿QUÉ ES UN @keyframes?
+   Es la forma de CSS de describir una animación paso a paso.
+   "from" es cómo empieza el elemento, "to" es cómo termina.
+   Solo define la animación, no la aplica a nada todavía.
+
+   ¿CÓMO SE USA?
+   En el CSS de tu sección escribes:
+     .mi-elemento { animation: fadeInUp 0.6s ease; }
+
+   ─────────────────────────────────────────────
+
+   ¿QUÉ ES AOS?
+   AOS (Animate On Scroll) es una librería que hace que los
+   elementos aparezcan con animación cuando el usuario llega
+   a ellos haciendo scroll. No hay que instalar nada.
+
+   ¿CÓMO SE USA AOS?
+   Solo agrega el atributo data-aos en cualquier elemento HTML:
+
+     <div data-aos="fade-up">
+       Este elemento aparece desde abajo al hacer scroll
+     </div>
+
+   Efectos disponibles:
+     data-aos="fade-up"      →  aparece subiendo
+     data-aos="fade-left"    →  aparece desde la derecha
+     data-aos="fade-right"   →  aparece desde la izquierda
+     data-aos="zoom-in"      →  aparece creciendo
+     data-aos="flip-left"    →  aparece girando
+
+   Para retrasar la animación (útil en tarjetas seguidas):
+     <div data-aos="fade-up" data-aos-delay="100">primero</div>
+     <div data-aos="fade-up" data-aos-delay="200">segundo</div>
+     <div data-aos="fade-up" data-aos-delay="300">tercero</div>
+
+   ============================================ */
+
+
+/* Animación: aparece subiendo desde abajo
+   Uso: <elemento style="animation: fadeInUp 0.6s ease">
+   O en sections.css: .hero__titulo { animation: fadeInUp 0.6s ease; } */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación: aparece desde invisible
+   Uso igual que fadeInUp pero sin movimiento */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/* ── ACCESIBILIDAD ──────────────────────────────────────────────
+   Algunos usuarios activan "reducir movimiento" en su celular
+   o computador porque las animaciones les causan mareo o
+   molestia (es una opción en la configuración del sistema).
+   Este bloque detecta eso y desactiva todas las animaciones
+   automáticamente. No tocar. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

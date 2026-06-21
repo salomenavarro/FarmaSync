@@ -1,0 +1,73 @@
+/* ============================================
+   FARMASYNC — Estilos principales y globales
+   
+   Aquí van:
+   - Las variables de color y tipografía (:root)
+   - El reset básico y configuraciones del HTML/Body
+   - Estilos base para elementos genéricos (img, a, ul, botones globales)
+   
+   NOTA: Los estilos específicos de cada bloque visual 
+   (Hero, Beneficios, FAQ, etc.) se editan en sections.css
+   ============================================ */
+
+:root {
+  --color-primary:  #00A8A8;
+  --color-bg-main:  #FCFBDC;
+  --color-bg-alt:   #FFF8F0;
+  --color-text:     #374151;
+  --color-border:   #E5E7EB;
+  --color-white:    #FFFFFF;
+
+  /* Tipografía — completar*/
+  --font-titles: sans-serif;
+  --font-body:   sans-serif;
+}
+
+/* ==========================================
+   1. REINICIO UNIVERSAL (RESET)
+   ========================================== */
+
+/* Quita márgenes y paddings por defecto; ajusta el cálculo de tamaños */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* ==========================================
+   2. CONFIGURACIÓN GLOBAL DE LA PÁGINA
+   ========================================== */
+
+/* Activa el desplazamiento suave en transiciones internas */
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* Define la tipografía, colores base e interlineado del cuerpo */
+body { 
+  font-family: var(--font-body); 
+  color: var(--color-text); 
+  background-color: var(--color-bg-main); 
+  line-height: 1.6; 
+}
+
+/* ==========================================
+   3. ESTILOS BASE PARA ELEMENTOS ESPECÍFICOS
+   ========================================== */
+
+/* Hace las imágenes responsivas y elimina el espacio inferior por defecto */
+img { 
+  max-width: 100%; 
+  display: block; 
+}
+
+/* Quita el color azul y el subrayado por defecto de los enlaces */
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+/* Elimina las viñetas (puntos) de las listas */
+ul { 
+  list-style: none; 
+}
