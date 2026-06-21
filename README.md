@@ -91,7 +91,7 @@ Abre `index.html` directamente en tu navegador (doble clic), o usa la extensión
 
 **Qué debe incluir la sección:**
 - Un título y subtítulo
-- Mínimo 5 preguntas en 
+- Mínimo 5 preguntas
 
 **Diseño:** libre. Usa las variables de color del proyecto.
 
