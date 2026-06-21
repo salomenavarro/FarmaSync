@@ -74,8 +74,12 @@ Abre `index.html` directamente en tu navegador (doble clic), o usa la extensión
 
 **Diseño:** libre. Puedes usar tarjetas, íconos emoji o SVG, grid o flex, el fondo que prefieras. Usa las variables de color del proyecto para mantener coherencia.
 
+-
 
-
+**Kevin** Se implementó la sección de beneficios en la página web.
+**En**
+- HTML → dentro de `<section id="beneficios">` en `index.html`
+- CSS → en el bloque `/* ── BENEFICIOS — Kevin */` dentro de `sections.css`
 
 ---
 
