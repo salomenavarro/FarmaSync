@@ -20,6 +20,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+ const faqCards = document.querySelectorAll(".faq-card");
+
+faqCards.forEach(card => {
+    const button = card.querySelector(".faq-toggle");
+
+    button.addEventListener("click", () => {
+        card.classList.toggle("active");
+    });
+});
+
  
 
 
