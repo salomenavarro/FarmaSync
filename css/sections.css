@@ -570,7 +570,6 @@ font-size: .95rem;
   font-family: sans-serif; /* Se adapta a la fuente que uses globalmente */
 }
 
-/* Contenedor principal con diseño tabular usando bloques de tabla */
 .footer-container {
   display: table;
   width: 100%;
@@ -579,14 +578,11 @@ font-size: .95rem;
   table-layout: fixed;
 }
 
-/* Configuración de las columnas */
 .footer-column {
   display: table-cell;
   padding: 0 20px;
   vertical-align: top;
 }
-
-/* --- Columna 1: Logo y Slogan --- */
 .footer-logo {
   max-width: 180px;
   height: auto;
@@ -597,12 +593,11 @@ font-size: .95rem;
   background-color: transparent; 
 }
 
-/* Espacio reservado visualmente en CSS por si el logo tarda en cargarse */
 #footer-logo-placeholder::after {
   content: "[ Logotipo FarmaSync ]";
   display: block;
   font-weight: bold;
-  color: #004B87; /* El tono azul base propuesto para tu identidad */
+  color: #004B87; 
   font-size: 1.2rem;
 }
 
@@ -614,16 +609,14 @@ font-size: .95rem;
   opacity: 0.9;
 }
 
-/* --- Títulos de las Columnas --- */
 .footer-column h3 {
-  color: #004B87; /* Color Azul sugerido para combinar con el logo */
+  color: #004B87; 
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* --- Listas y Enlaces --- */
 .footer-links-list {
   list-style: none;
   padding: 0;
@@ -641,12 +634,10 @@ font-size: .95rem;
   transition: color 0.3s ease;
 }
 
-/* Efecto Hover usando el color primario de tus variables */
 .footer-links-list a:hover {
   color: var(--color-primary); 
 }
 
-/* --- Texto legal pequeño --- */
 .legal-disclaimer {
   font-size: 0.8rem;
   line-height: 1.4;
@@ -655,7 +646,6 @@ font-size: .95rem;
   opacity: 0.7;
 }
 
-/* --- Barra Inferior de Copyright --- */
 .footer-bottom {
   max-width: 1200px;
   margin: 40px auto 0 auto;
@@ -676,9 +666,7 @@ font-size: .95rem;
   opacity: 0.7;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (Para dispositivos móviles)
-   ========================================================================== */
+
 @media (max-width: 768px) {
   .footer-container {
     display: block; /* Pasa de tabla a bloques lineales */
@@ -699,6 +687,6 @@ font-size: .95rem;
     margin-top: 20px;
   }
 }
-=======
+
 ──────────────────────────────────────────── */ 
 >>>>>>> 9f4a58bffcd95906043b6e0df0b562d3e5d82dde
