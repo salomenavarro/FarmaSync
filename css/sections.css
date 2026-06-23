@@ -382,6 +382,194 @@
 ──────────────────────────────────────────── */
 
 
+/* ESTADÍSTICAS EN EL ENCABEZADO */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 2rem auto 3rem;
+    background: var(--color-white);
+    padding: 1.5rem 3rem;
+    border-radius: 50px; /* Estilo píldora muy moderno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--color-border);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--color-primary); /* Tu turquesa #00A8A8 */
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* Línea sutil divisora entre números */
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--color-border);
+}
+
+.prueba-social-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE PARA MÓVILES (Estadísticas en columna) */
+@media (max-width: 650px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    
+    .stat-divider {
+        width: 60px;
+        height: 1px;
+    }
+}
+
+.prueba-social {
+    padding: 5rem 2rem;
+    background-color: #fcf9f2; /* 👈 El tono menta claro directo */
+}
+
+.prueba-social-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.prueba-social-header h2 {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.linea-decorativa {
+    width: 70px;
+    height: 4px;
+    background: var(--color-primary);
+    margin: 1rem auto 1.5rem;
+    border-radius: 10px;
+}
+
+.prueba-social-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* GRID DE TESTIMONIOS */
+.prueba-social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TARJETAS */
+.testimonio-card {
+    background: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 168, 168, 0.15); /* Sombra sutil con el color primario */
+}
+
+/* ESTRELLAS */
+.estrellas {
+    color: #ffb703; /* Color dorado para las estrellas */
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonio-texto {
+    color: var(--color-text);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* INFORMACIÓN DE USUARIO */
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+.usuario-avatar {
+    width: 50px;
+    height: 50px;
+    background: #e0f2f1;
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.usuario-detalles h4 {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.usuario-detalles span {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .prueba-social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .prueba-social-header h2 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .prueba-social-grid {
+        grid-template-columns: 1fr;
+    }
+    .prueba-social {
+        padding: 4rem 1.5rem;
+    }
+}
+
+
 
  /* ── FAQ — Nikoll ──────────────────────────── */
 
