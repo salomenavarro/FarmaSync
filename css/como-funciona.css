@@ -1,0 +1,287 @@
+/* ── CÓMO FUNCIONA — Emiliano (Cohesión de Diseño) ── */
+.como-funciona {
+    padding: 8rem 2rem;
+    background: #ffffff; /* Alternancia de fondo limpia */
+}
+
+.como-funciona__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(0, 168, 168, 0.1);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.section-header p {
+    max-width: 600px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* LAYOUT PRINCIPAL */
+.workflow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* MOCKUP INTELIGENTE */
+.phone-container {
+    display: flex;
+    justify-content: center;
+}
+
+.phone {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 1.8rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
+}
+
+.phone-header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+}
+
+.mockup-search {
+    background: var(--color-bg-main);
+    padding: 0.85rem 1.2rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+.mockup-search i {
+    color: var(--color-primary);
+}
+
+.mockup-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.mockup-card h4 {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 0.3rem;
+}
+
+.mockup-card p {
+    font-size: 0.88rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.status {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+    background: rgba(22, 163, 74, 0.08);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* CONTENEDOR DE PASOS */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 168, 168, 0.02);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.35s ease;
+}
+
+.step > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* HOVER ANIMACIÓN EMILIANO */
+.step:hover {
+    transform: translateX(8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 30px rgba(0, 168, 168, 0.06);
+}
+
+.step:hover::before {
+    background: var(--color-primary);
+}
+
+.step:hover::after {
+    transform: scaleX(1);
+}
+
+.step-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    min-width: 45px;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.step:hover .step-number {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.step-text-block h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.step-text-block p {
+    color: #6b7280;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+/* PILL BENEFITS INFERIORES */
+.workflow-benefits {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background: #ffffff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.benefit i {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .workflow {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .phone-container {
+        order: 2; /* El mockup baja para priorizar la lectura de los pasos en móviles */
+    }
+
+    .section-header h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .como-funciona {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .step {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+
+    .step-number {
+        font-size: 1.5rem;
+        min-width: 35px;
+    }
+
+    .workflow-benefits {
+        gap: 1rem;
+    }
+
+    .benefit {
+        width: 100%;
+        justify-content: center;
+    }
+}

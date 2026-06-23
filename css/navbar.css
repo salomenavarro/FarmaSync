@@ -1,0 +1,229 @@
+/* ── NAVBAR — Salome ────────────────────────
+──────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  /* Estado Inicial: Barra completa en el tope */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(26, 22, 18, 0.06);
+  border-radius: 0;
+  z-index: 1000;
+
+  /* Transición fluida para simular el efecto de metamorfosis */
+  transition:
+    top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.3s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Estado Activo: Se transforma en cápsula flotante al hacer Scroll */
+.navbar--scrolled {
+  top: 16px;
+  width: calc(100% - 32px);
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 22, 18, 0.08);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(26, 22, 18, 0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 32px;
+  /* Espaciado interno elegante */
+  gap: 16px;
+}
+
+/* Logo: Más pequeño y sobrio */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-titles);
+  font-weight: 700;
+  font-size: 1.15rem;
+  /* Letra reducida */
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.navbar__logo img {
+  height: 42px;
+  /* Altura ideal para que se aprecien todos los detalles */
+  width: auto;
+  /* Permite que la imagen mantenga su proporción real sin deformarse */
+  max-width: 140px;
+  /* Límite de seguridad por si el diseño del logo es horizontal */
+  object-fit: contain;
+  display: block;
+}
+
+/* Links centrales de escritorio: Menores dimensiones, mayor aire */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__links a {
+  font-size: 0.85rem;
+  /* Tamaño estilizado e ideal */
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 6px 0;
+  position: relative;
+  /* Necesario para posicionar la línea debajo */
+  transition: opacity 0.2s ease;
+}
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Espaciado sutil para que no toque la letra directamente */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  /* Línea con el color de tu marca */
+  transform: scaleX(0);
+  transform-origin: center;
+  /* La línea se abre desde el centro hacia los lados, estilo moderno */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Transición suave y limpia */
+}
+
+/* Comportamiento al pasar el cursor: La línea se expande por completo */
+.navbar__links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Acciones de la derecha */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__login {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.navbar__login:hover {
+  background-color: rgba(26, 22, 18, 0.04);
+}
+
+/* Botón de Registro Plano (Sin luces ni brillos) */
+.navbar__register {
+  font-size: 0.85rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: none;
+  /* Brillo eliminado por completo */
+  transition: background-color 0.2s ease;
+}
+
+.navbar__register:hover {
+  background-color: #009292;
+  /* Tono sólido ligeramente oscuro */
+}
+
+/* Hamburguesa (Móvil) */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+}
+
+/* Menú Desplegable Móvil */
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  padding: 4px 24px 20px;
+  gap: 2px;
+}
+
+.navbar__mobile a {
+  display: block;
+  padding: 10px 8px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.navbar__divider {
+  border: none;
+  border-top: 1px solid rgba(26, 22, 18, 0.06);
+  margin: 8px 0;
+}
+
+.navbar__login-mobile,
+.navbar__register-mobile {
+  text-align: center;
+  font-weight: 600;
+}
+
+.navbar__register-mobile {
+  background-color: var(--color-primary);
+  color: var(--color-white) !important;
+  border-radius: 999px;
+}
+
+.navbar__mobile--open {
+  display: flex;
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 992px) {
+
+  .navbar__links,
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  /* Comportamiento móvil: se mantiene flotante pequeño desde el inicio */
+  .navbar {
+    top: 12px;
+    width: calc(100% - 24px);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+}

@@ -10,10 +10,10 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
      <!-- AOS Animations -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-     
+
      <!-- Stylesheets -->
      <link rel="stylesheet" href="css/styles.css" />
-     <link rel="stylesheet" href="css/sections.css" />
+     <link rel="stylesheet" href="css/prueba-social.css" />
      <link rel="stylesheet" href="css/animations.css" />
      <link rel="stylesheet" href="css/navbar.css" />
      <link rel="stylesheet" href="css/hero.css" />
@@ -29,17 +29,18 @@
      <!-- NAVBAR — Responsable: Salome -->
      <nav class="navbar" aria-label="Navegación principal">
           <div class="navbar__inner">
-               <a href="#" class="navbar__logo">
+               <a href="#hero" class="navbar__logo">
                     <img src="assets/img/logo.png" alt="FarmaSync Logo">
                     <span>FarmaSync</span>
                </a>
 
+               <!-- Enlaces de Escritorio Corregidos -->
                <div class="navbar__links">
                     <a href="#propuesta">Propuesta</a>
                     <a href="#beneficios">Beneficios</a>
                     <a href="#como-funciona">Cómo funciona</a>
-                    <a href="#aliados">Farmacias Aliadas</a>
-                    <a href="#formulario">Contacto</a>
+                    <a href="#prueba_social">Testimonios</a>
+                    <a href="#faq">FAQ</a>
                </div>
 
                <div class="navbar__actions">
@@ -54,12 +55,13 @@
                </button>
           </div>
 
+          <!-- Enlaces Móviles Corregidos -->
           <div class="navbar__mobile">
                <a href="#propuesta">Propuesta</a>
                <a href="#beneficios">Beneficios</a>
                <a href="#como-funciona">Cómo funciona</a>
-               <a href="#aliados">Farmacias Aliadas</a>
-               <a href="#formulario">Contacto</a>
+               <a href="#prueba_social">Testimonios</a>
+               <a href="#faq">FAQ</a>
                <hr class="navbar__divider">
                <a href="#" class="navbar__login-mobile">Iniciar Sesión</a>
                <a href="#" class="navbar__register-mobile">Registrarse</a>
@@ -75,7 +77,7 @@
                     </div>
 
                     <h1 class="hero__title">
-                         Reserva tus medicamentos <span class="hero__title--gradient">a tempo</span> con FarmaSync
+                         Reserva tus medicamentos <span class="hero__title--gradient">a tiempo</span> con FarmaSync
                     </h1>
 
                     <p class="hero__subtitle">
@@ -88,7 +90,7 @@
                          <a href="#como-funciona" class="hero__btn hero__btn--secondary">Ver cómo funciona</a>
                     </div>
                </div>
-               
+
                <div class="hero__visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <div class="hero__glow hero__glow--primary"></div>
                     <div class="hero__glow hero__glow--secondary"></div>
@@ -101,183 +103,173 @@
      </section>
 
      <!-- PROPUESTA DE VALOR HÍBRIDA — Responsable: Salome -->
-     <section id="propuesta" class="prop-hibrida">
-          <div class="proph__container">
-               <!-- LADO IZQUIERDO -->
-               <div class="proph__intro" data-aos="fade-right" data-aos-duration="1000">
-                    <span class="proph__tag">El efecto FarmaSync</span>
-                    <h2 class="proph__main-title">Pensado para hacerte la vida más fácil</h2>
-                    <p class="proph__main-desc">
-                         Eliminamos la incertidumbre y las barreras entre tú y tus medicamentos. Una experiencia
-                         diseñada desde la empatía, la claridad y el respeto por tu tiempo.
+<section id="propuesta" class="prop-hibrida">
+     <div class="proph__container">
+
+          <!-- LADO IZQUIERDO -->
+          <div class="proph__intro" data-aos="fade-right" data-aos-duration="1000">
+               <span class="proph__tag">El efecto FarmaSync</span>
+               <h2 class="proph__main-title">Tu tratamiento no debería depender de la suerte</h2>
+               <p class="proph__main-desc">
+                    Miles de pacientes en Colombia se desplazan a su farmacia EPS sin saber si 
+                    el medicamento que necesitan está disponible. FarmaSync elimina esa incertidumbre y las barreras entre tú y tus medicamentos, una experiencia
+                    diseñada desde la empatía, la claridad y el respeto por tu tiempo.
+               </p>
+          </div>
+
+          <!-- LADO DERECHO -->
+          <div class="proph__timeline">
+
+               <!-- Valor 1 -->
+               <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="proph__node-zone">
+                         <div class="proph__node">1</div>
+                    </div>
+                    <div class="proph__content">
+                         <span class="proph__step-location">Sin desplazamientos en vano</span>
+                         <h3 class="proph__step-title">Consulta antes de salir</h3>
+                         <p class="proph__step-text">
+                              Verifica en tiempo real si tu medicamento está disponible en las farmacias 
+                              asociadas a tu EPS. Sin llamadas, sin filas, sin viajes innecesarios.
+                         </p>
+                    </div>
+               </div>
+
+               <!-- Valor 2 -->
+               <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="proph__node-zone">
+                         <div class="proph__node">2</div>
+                    </div>
+                    <div class="proph__content">
+                         <span class="proph__step-location">Para pacientes crónicos y cuidadores</span>
+                         <h3 class="proph__step-title">Reserva con hasta 5 días de anticipación</h3>
+                         <p class="proph__step-text">
+                              Aparta tu medicamento antes de que se agote. Si eres cuidador, 
+                              puedes hacer la reserva en nombre del paciente a tu cargo 
+                              sin necesitar que esté presente.
+                         </p>
+                    </div>
+               </div>
+
+               <!-- Valor 3 -->
+               <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="proph__node-zone">
+                         <div class="proph__node">3</div>
+                    </div>
+                    <div class="proph__content">
+                         <span class="proph__step-location">Tranquilidad garantizada</span>
+                         <h3 class="proph__step-title">Tu código, tu medicamento</h3>
+                         <p class="proph__step-text">
+                              Al confirmar tu reserva recibes un código único. Llégalo a mostrar 
+                              en la farmacia y retira sin filas. Tu tratamiento continúa 
+                              sin interrupciones.
+                         </p>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+     <!-- BENEFICIOS — Responsable: Kevin (Optimizado para Cohesión) -->
+     <section id="beneficios" class="beneficios">
+
+          <div class="beneficios-header" data-aos="fade-up" data-aos-duration="1000">
+               <h2>Beneficios de FarmaSync</h2>
+               <div class="linea"></div>
+               <p>
+                    Facilitamos el acceso a tus medicamentos y servicios de salud de manera eficiente y segura.
+               </p>
+          </div>
+
+          <div class="beneficios-grid">
+
+               <!-- Tarjeta 1 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Consulta en tiempo real</h3>
+                    <p>
+                         Olvídate de recorrer múltiples farmacias a ciegas. Nuestra plataforma te permite verificar la
+                         disponibilidad exacta de tus medicamentos en tiempo real desde cualquier dispositivo.
                     </p>
-               </div>
+               </article>
 
-               <!-- LADO DERECHO -->
-               <div class="proph__timeline">
-                    <!-- Paso 1 -->
-                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                         <div class="proph__node-zone">
-                              <div class="proph__node">1</div>
-                         </div>
-                         <div class="proph__content">
-                              <span class="proph__step-location">Desde tu hogar</span>
-                              <h3 class="proph__step-title">Consultas la disponibilidad</h3>
-                              <p class="proph__step-text">
-                                   Antes de planear tu día o gastar en transporte, abres FarmaSync y verificas en
-                                   segundos si tu farmacia asignada tiene el medicamento que te recetaron.
-                              </p>
-                         </div>
+               <!-- Tarjeta 2 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-calendar-check"></i>
                     </div>
+                    <h3>Reserva anticipada</h3>
+                    <p>
+                         Con tan solo unos pocos clics, puedes apartar los fármacos que necesitas de manera inmediata.
+                    </p>
+               </article>
 
-                    <!-- Paso 2 -->
-                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                         <div class="proph__node-zone">
-                              <div class="proph__node">2</div>
-                         </div>
-                         <div class="proph__content">
-                              <span class="proph__step-location">En tu teléfono</span>
-                              <h3 class="proph__step-title">Reservas con un solo toque</h3>
-                              <p class="proph__step-text">
-                                   Si está disponible, lo aseguras de inmediato. El sistema genera un código único de
-                                   reserva y guarda tus cajas exclusivamente para ti, evitando que se agoten mientras
-                                   viajas.
-                              </p>
-                         </div>
+               <!-- Tarjeta 3 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-bell"></i>
                     </div>
+                    <h3>Notificaciones</h3>
+                    <p>
+                         Mantente siempre informado. Recibe avisos automáticos directamente en tu dispositivo sobre el
+                         estado de tus reservas y si un medicamento de alta demanda vuelve a estar disponible.
+                    </p>
+               </article>
 
-                    <!-- Paso 3 -->
-                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                         <div class="proph__node-zone">
-                              <div class="proph__node">3</div>
-                         </div>
-                         <div class="proph__content">
-                              <span class="proph__step-location">En la farmacia EPS</span>
-                              <h3 class="proph__step-title">Retiras por la ventanilla rápida</h3>
-                              <p class="proph__step-text">
-                                   Llegas al punto de entrega, te diriges directamente a la fila preferencial para
-                                   usuarios de la aplicación, muestras tu código y listo. Sin filas eternas ni
-                                   regresarte con las manos vacías.
-                              </p>
-                         </div>
+               <!-- Tarjeta 4 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-clock"></i>
                     </div>
-               </div>
+                    <h3>Menos espera</h3>
+                    <p>
+                         Reducimos drásticamente el tiempo invertido tanto en la búsqueda digital como en la obtención
+                         física de tus medicamentos.
+                    </p>
+               </article>
+
+               <!-- Tarjeta 5 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3>Acceso oportuno</h3>
+                    <p>
+                         El éxito de un tratamiento depende de la constancia. Nos aseguramos de que encuentres tus
+                         recetas a tiempo para mejorar la adherencia y continuidad de tus tratamientos médicos.
+                    </p>
+               </article>
+
+               <!-- Tarjeta 6 -->
+               <article class="beneficio-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Seguridad</h3>
+                    <p>
+                         Cumplimos con las normativas vigentes de salud y protección de datos para brindarte una
+                         experiencia digital totalmente segura y transparente.
+                    </p>
+               </article>
+
           </div>
      </section>
 
-     <!-- BENEFICIOS — Responsable: Kevin -->
-    <section id="beneficios" class="beneficios">
+     <!-- CÓMO FUNCIONA — Responsable: Emiliano (Optimizado para Cohesión) -->
+     <section id="como-funciona" class="como-funciona">
+          <div class="como-funciona__container">
 
-    <div class="beneficios-header">
-        <h2>BENEFICIOS DE FARMASYNC</h2>
-        <div class="linea"></div>
-
-        <p>
-           Facilitamos el acceso a tus medicamentos y servicios de salud de manera eficiente y segura.
-        </p>
-    </div>
-
-    <div class="beneficios-grid">
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <h3>Consulta en tiempo real</h3>
-
-            <p>
-                Olvídate de recorrer múltiples farmacias a ciegas. Nuestra plataforma te permite verificar la disponibilidad exacta de tus medicamentos en tiempo real desde cualquier dispositivo.
-            </p>
-
-        </article>
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-calendar-check"></i>
-            </div>
-
-            <h3>Reserva anticipada</h3>
-
-            <p>
-                Con tan solo unos pocos clics, puedes apartar los fármacos que necesitas de manera inmediata.
-            </p>
-
-        </article>
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-bell"></i>
-            </div>
-
-            <h3>Notificaciones</h3>
-
-            <p>
-                Mantente siempre informado. Recibe avisos automáticos directamente en tu dispositivo sobre el estado de tus reservas y si un medicamento de alta demanda vuelve a estar disponible.
-            </p>
-
-        </article>
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-clock"></i>
-            </div>
-
-            <h3>Menos espera</h3>
-
-            <p>
-                Reducimos drásticamente el tiempo invertido tanto en la búsqueda digital como en la obtención física de tus medicamentos.
-            </p>
-
-        </article>
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-pills"></i>
-            </div>
-
-            <h3>Acceso oportuno</h3>
-
-            <p>
-                El éxito de un tratamiento depende de la constancia. Nos aseguramos de que encuentres tus recetas a tiempo para mejorar la adherencia y continuidad de tus tratamientos médicos.
-            </p>
-
-        </article>
-
-        <article class="beneficio-card">
-
-            <div class="icon-circle">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
-
-            <h3>Seguridad</h3>
-
-            <p>
-                Cumplimos con las normativas vigentes de salud y protección de datos para brindarte una experiencia digital totalmente segura y transparente.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-     <!-- CÓMO FUNCIONA — Responsable: Emiliano -->
-     <section id="como_funciona">
-          <div class="container">
-               <div class="section-header" data-aos="fade-up">
+               <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
                     <span class="badge">¿Cómo funciona?</span>
                     <h2>Tu medicamento en solo 5 pasos</h2>
                     <p>Consulta disponibilidad, reserva y recibe notificaciones desde una sola plataforma.</p>
                </div>
 
                <div class="workflow">
-                    <div class="phone-container" data-aos="fade-right">
+                    <!-- Mockup del Teléfono -->
+                    <div class="phone-container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                          <div class="phone">
                               <div class="phone-header">
                                    <span>FarmaSync</span>
@@ -300,47 +292,60 @@
                          </div>
                     </div>
 
-                    <!-- Pasos -->
+                    <!-- Contenedor de Pasos -->
                     <div class="steps-container">
-                         <div class="step active" data-aos="fade-left" data-aos-delay="100">
+
+                         <!-- Paso 1 -->
+                         <div class="step active" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                               <div class="step-number">01</div>
-                              <div>
+                              <div class="step-text-block">
                                    <h3>Busca tu medicamento</h3>
-                                   <p>Consulta disponibilidad antes de salir de casa.</p>
+                                   <p>Consulta la disponibilidad exacta en tiempo real antes de salir de tu hogar.</p>
                               </div>
                          </div>
-                         <div class="step" data-aos="fade-left" data-aos-delay="200">
+
+                         <!-- Paso 2 -->
+                         <div class="step" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                               <div class="step-number">02</div>
-                              <div>
+                              <div class="step-text-block">
                                    <h3>Encuentra una farmacia</h3>
-                                   <p>Visualiza las farmacias donde está disponible.</p>
+                                   <p>Visualiza los puntos de distribución de tu EPS que cuentan con el stock necesario.
+                                   </p>
                               </div>
                          </div>
-                         <div class="step" data-aos="fade-left" data-aos-delay="300">
+
+                         <!-- Paso 3 -->
+                         <div class="step" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                               <div class="step-number">03</div>
-                              <div>
+                              <div class="step-text-block">
                                    <h3>Realiza tu reserva</h3>
-                                   <p>Reserva tu medicamento en pocos segundos.</p>
+                                   <p>Aparta tus fármacos de forma digital con un solo toque de manera inmediata.</p>
                               </div>
                          </div>
-                         <div class="step" data-aos="fade-left" data-aos-delay="400">
+
+                         <!-- Paso 4 -->
+                         <div class="step" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                               <div class="step-number">04</div>
-                              <div>
+                              <div class="step-text-block">
                                    <h3>Recibe confirmación</h3>
-                                   <p>Obtén notificaciones automáticas.</p>
+                                   <p>Obtén un código QR único de reserva y alertas automáticas sobre su estado.</p>
                               </div>
                          </div>
-                         <div class="step" data-aos="fade-left" data-aos-delay="500">
+
+                         <!-- Paso 5 -->
+                         <div class="step" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
                               <div class="step-number">05</div>
-                              <div>
+                              <div class="step-text-block">
                                    <h3>Recoge tu medicamento</h3>
-                                   <p>Presenta tu comprobante y reclama tu reserva.</p>
+                                   <p>Presenta tu comprobante digital en la ventanilla rápida y retira sin filas.</p>
                               </div>
                          </div>
+
                     </div>
                </div>
 
-               <div class="workflow-benefits" data-aos="zoom-in">
+               <!-- Fajas de beneficios inferiores -->
+               <div class="workflow-benefits" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                     <div class="benefit">
                          <i class="fa-solid fa-clock"></i>
                          <span>Ahorra tiempo</span>
@@ -358,106 +363,122 @@
                          <span>Proceso seguro</span>
                     </div>
                </div>
+
           </div>
      </section>
 
-     <!-- PRUEBA SOCIAL -->
- <section id="prueba_social" class="prueba-social">
-   <div class="prueba-social-header">
-        <h2>CONFIANZA RESPALDADA POR RESULTADOS</h2>
-        <div class="linea-decorativa"></div>
-        
-        <div class="stats-container">
-            <div class="stat-item">
-                <span class="stat-number">+1,000</span>
-                <span class="stat-label">Usuarios Satisfechos</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">98%</span>
-                <span class="stat-label">Menos Filas</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Consultas Disponibles</span>
-            </div>
-        </div>
+     <!-- PRUEBA SOCIAL — Optimizado con Animaciones AOS y Estructura Cohesiva -->
+     <section id="prueba_social" class="prueba-social">
+          <div class="prueba-social__container">
 
-        <p class="prueba-social-subtitle">
-            Lee las experiencias reales de pacientes y profesionales de la salud que ya transformaron su acceso a medicamentos con FarmaSync.
-        </p>
-    </div>
+               <!-- Encabezado de la Sección -->
+               <div class="prueba-social-header" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="badge">Prueba Social</span>
+                    <h2>Confianza respaldada por resultados</h2>
+                    <div class="linea-decorativa"></div>
 
-    <div class="prueba-social-grid">
-        
-        <article class="testimonio-card">
-            <div class="estrellas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonio-texto">
-                "Excelente plataforma. Antes perdía horas haciendo filas en la farmacia solo para que me dijeran que no había stock. Ahora reservo desde casa."
-            </p>
-            <div class="usuario-info">
-                <div class="usuario-avatar">
-                    <i class="fa-solid fa-user"></i> 
-                </div>
-                <div class="usuario-detalles">
-                    <h4>Carlos Mendoza</h4>
-                    <span>Paciente EPS</span>
-                </div>
-            </div>
-        </article>
+                    <!-- Contenedor de Estadísticas Destacadas -->
+                    <div class="stats-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                         <div class="stat-item">
+                              <span class="stat-number">+1,000</span>
+                              <span class="stat-label">Usuarios Satisfechos</span>
+                         </div>
+                         <div class="stat-divider"></div>
+                         <div class="stat-item">
+                              <span class="stat-number">98%</span>
+                              <span class="stat-label">Menos Filas</span>
+                         </div>
+                         <div class="stat-divider"></div>
+                         <div class="stat-item">
+                              <span class="stat-number">24/7</span>
+                              <span class="stat-label">Consultas Disponibles</span>
+                         </div>
+                    </div>
 
-        <article class="testimonio-card">
-            <div class="estrellas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonio-texto">
-                "Como regente de farmacia, FarmaSync nos ha ayudado a organizar mejor el inventario y reducir las aglomeraciones. El flujo de trabajo mejoró un 100%."
-            </p>
-            <div class="usuario-info">
-                <div class="usuario-avatar">
-                    <i class="fa-solid fa-user-nurse"></i>
-                </div>
-                <div class="usuario-detalles">
-                    <h4>Diana Restrepo</h4>
-                    <span>Regente de Farmacia</span>
-                </div>
-            </div>
-        </article>
+                    <p class="prueba-social-subtitle">
+                         Lee las experiencias reales de pacientes y profesionales de la salud que ya transformaron su
+                         acceso a medicamentos con FarmaSync.
+                    </p>
+               </div>
 
-        <article class="testimonio-card">
-            <div class="estrellas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>
-            </div>
-            <p class="testimonio-texto">
-                "Me encanta la sección de notificaciones. Me avisa exactamente cuándo puedo ir a recoger mis medicamentos crónicos sin contratiempos."
-            </p>
-            <div class="usuario-info">
-                <div class="usuario-avatar">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="usuario-detalles">
-                    <h4>Andrés Felipe G.</h4>
-                    <span>Usuario Frecuente</span>
-                </div>
-            </div>
-        </article>
-        
-    </div> </section>
+               <!-- Grid de Testimonios -->
+               <div class="prueba-social-grid">
+
+                    <!-- Testimonio 1 -->
+                    <article class="testimonio-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                         <div class="estrellas">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                         </div>
+                         <p class="testimonio-texto">
+                              "Excelente plataforma. Antes perdía horas haciendo filas en la farmacia solo para que me
+                              dijeran que no había stock. Ahora reservo desde casa."
+                         </p>
+                         <div class="usuario-info">
+                              <div class="usuario-avatar">
+                                   <i class="fa-solid fa-user"></i>
+                              </div>
+                              <div class="usuario-detalles">
+                                   <h4>Carlos Mendoza</h4>
+                                   <span>Paciente EPS</span>
+                              </div>
+                         </div>
+                    </article>
+
+                    <!-- Testimonio 2 -->
+                    <article class="testimonio-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                         <div class="estrellas">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                         </div>
+                         <p class="testimonio-texto">
+                              "Como regente de farmacia, FarmaSync nos ha ayudado a organizar mejor el inventario y
+                              reducir las aglomeraciones. El flujo de trabajo mejoró un 100%."
+                         </p>
+                         <div class="usuario-info">
+                              <div class="usuario-avatar">
+                                   <i class="fa-solid fa-user-nurse"></i>
+                              </div>
+                              <div class="usuario-detalles">
+                                   <h4>Diana Restrepo</h4>
+                                   <span>Regente de Farmacia</span>
+                              </div>
+                         </div>
+                    </article>
+
+                    <!-- Testimonio 3 -->
+                    <article class="testimonio-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                         <div class="estrellas">
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-regular fa-star-half-stroke"></i>
+                         </div>
+                         <p class="testimonio-texto">
+                              "Me encanta la sección de notificaciones. Me avisa exactamente cuándo puedo ir a recoger
+                              mis medicamentos crónicos sin contratiempos."
+                         </p>
+                         <div class="usuario-info">
+                              <div class="usuario-avatar">
+                                   <i class="fa-solid fa-user"></i>
+                              </div>
+                              <div class="usuario-detalles">
+                                   <h4>Andrés Felipe G.</h4>
+                                   <span>Usuario Frecuente</span>
+                              </div>
+                         </div>
+                    </article>
+
+               </div>
+          </div>
+     </section>
 
      <!-- FAQ — Responsable: Nikoll -->
      <section id="faq" class="faq-section">
@@ -475,7 +496,8 @@
                               <span class="icon">+</span>
                          </button>
                          <div class="faq-content">
-                              <p>FarmaSync es una plataforma que permite anticipar y gestionar reservas de medicamentos en farmacias EPS.</p>
+                              <p>FarmaSync es una plataforma que permite anticipar y gestionar reservas de medicamentos
+                                   en farmacias EPS.</p>
                          </div>
                     </article>
 
@@ -522,24 +544,32 @@
           </div>
      </section>
 
-     <!-- FOOTER -->
+     <!-- FOOTER — Modernizado con CSS Grid y AOS -->
      <footer id="footer">
           <div class="footer-container">
+
+               <!-- Columna 1: Marca -->
                <div class="footer-column brand-info" data-aos="fade-up">
-                    <img src="#" alt="FarmaSync Logo" class="footer-logo" id="footer-logo-placeholder" />
-                    <p class="footer-slogan">"Inspirados en tu salud, enfocados en tu bienestar"</p>
+                    <a href="#" class="footer-logo-link">
+                         <!-- Reemplazar el src cuando tengas el logo real -->
+                         <img src="assets/img/logo-alt.png" alt="FarmaSync Logo" class="footer-logo"
+                              id="footer-logo-placeholder" />
+                    </a>
+                    <p class="footer-slogan">"Inspirados en tu salud, enfocados en tu bienestar."</p>
                </div>
 
+               <!-- Columna 2: Redes Sociales -->
                <div class="footer-column social-links" data-aos="fade-up" data-aos-delay="100">
                     <h3>Síguenos</h3>
                     <ul class="footer-links-list">
-                         <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                         <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                         <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> X (Twitter)</a></li>
+                         <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                         <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                         <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                         <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a></li>
                     </ul>
                </div>
 
+               <!-- Columna 3: Soporte -->
                <div class="footer-column support-links" data-aos="fade-up" data-aos-delay="200">
                     <h3>Soporte y Ayuda</h3>
                     <ul class="footer-links-list">
@@ -549,18 +579,22 @@
                     </ul>
                </div>
 
+               <!-- Columna 4: Legal -->
                <div class="footer-column legal-links" data-aos="fade-up" data-aos-delay="300">
                     <h3>Legal</h3>
                     <ul class="footer-links-list">
                          <li><a href="#">Términos y Condiciones</a></li>
-                         <li><a href="#">Política de Privacidad y Datos</a></li>
+                         <li><a href="#">Política de Privacidad</a></li>
                     </ul>
                     <p class="legal-disclaimer">
-                         FarmaSync es una plataforma informativa y de reserva. La entrega final está sujeta a validación en el punto físico.
+                         FarmaSync es una plataforma informativa y de reserva. La entrega final está sujeta a validación
+                         en el punto físico.
                     </p>
                </div>
+
           </div>
 
+          <!-- Cierre del Footer -->
           <div class="footer-bottom" data-aos="fade-up" data-aos-delay="400">
                <p>&copy; 2026 FarmaSync. Todos los derechos reservados.</p>
                <p class="footer-credit">Hecho con ♥ para optimizar tu bienestar.</p>

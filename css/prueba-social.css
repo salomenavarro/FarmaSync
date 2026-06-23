@@ -1,0 +1,202 @@
+/* ── PRUEBA SOCIAL — Estilizado y Cohesivo ── */
+.prueba-social {
+    padding: 8rem 2rem;
+    background-color: var(--color-bg-main); /* Tono crema/amarillo pastel cohesivo con la landing */
+}
+
+.prueba-social__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prueba-social-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.prueba-social-header h2 {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-top: 1rem;
+}
+
+.linea-decorativa {
+    width: 60px;
+    height: 4px;
+    background: var(--color-primary);
+    margin: 1.2rem auto 2.5rem;
+    border-radius: 10px;
+}
+
+/* ESTADÍSTICAS EN EL ENCABEZADO */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 850px;
+    margin: 0 auto 3rem;
+    background: #ffffff;
+    padding: 1.5rem 3rem;
+    border-radius: 999px; /* Diseño píldora puro */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--color-border);
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 45px;
+    background-color: var(--color-border);
+}
+
+.prueba-social-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #4b5563;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* GRID DE TESTIMONIOS */
+.prueba-social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* TARJETAS DE TESTIMONIOS */
+.testimonio-card {
+    background: #ffffff;
+    padding: 2.5rem 2.2rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 168, 168, 0.08);
+}
+
+/* ESTRELLAS DE CALIFICACIÓN */
+.estrellas {
+    color: #ffb703;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.testimonio-texto {
+    color: var(--color-text);
+    font-style: italic;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* INFORMACIÓN DE USUARIO */
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.usuario-avatar {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 168, 168, 0.08);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.usuario-detalles h4 {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+
+.usuario-detalles span {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    font-weight: 500;
+    display: block;
+}
+
+/* ── DISPOSITIVOS MEDIANOS (TABLETAS) ── */
+@media (max-width: 992px) {
+    .prueba-social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .prueba-social-header h2 {
+        font-size: 2.3rem;
+    }
+}
+
+/* ── DISPOSITIVOS MÓVILES ── */
+@media (max-width: 768px) {
+    .prueba-social {
+        padding: 5rem 1.5rem;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 28px;
+        padding: 2rem;
+    }
+    
+    .stat-divider {
+        width: 50%;
+        height: 1px;
+    }
+
+    .prueba-social-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .prueba-social-header h2 {
+        font-size: 2rem;
+    }
+}

@@ -10,17 +10,22 @@
    (Hero, Beneficios, FAQ, etc.) se editan en sections.css
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+   
 :root {
+
+
   --color-primary:  #00A8A8;
   --color-bg-main:  #FCFBDC;
   --color-bg-alt:   #FFF8F0;
-  --color-text:     #374151;
+  --color-text:      #1A1612;
   --color-border:   #E5E7EB;
   --color-white:    #FFFFFF;
+  --color-naranja: #FF9F43;
 
   /* Tipografía — completar*/
-  --font-titles: sans-serif;
-  --font-body:   sans-serif;
+  --font-titles:    'DM Sans', sans-serif;
+  --font-body:      'DM Sans', sans-serif;
 }
 
 /* ==========================================

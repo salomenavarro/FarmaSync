@@ -1,0 +1,251 @@
+/* ── HERO — salome ──────────────────────────
+──────────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  /* Bajamos a 85vh para que respire mejor y no fuerce tanto espacio en pantallas altas */
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  /* ¡Adiós frente! Bajamos el espacio superior a 100px y equilibramos el inferior */
+  padding: 100px 24px 50px 24px;
+  background-color: var(--color-bg-main);
+  overflow: hidden;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  /* División asimétrica moderna */
+  gap: 48px;
+  align-items: center;
+}
+
+/* --- Columna de Contenido --- */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Pequeña etiqueta superior (Badge) */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 168, 168, 0.08);
+  /* Fondo muy suave del color primario */
+  border: 1px solid rgba(0, 168, 168, 0.15);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.hero__badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+}
+
+/* Título Principal con Gradiente Creativo */
+.hero__title {
+  font-family: var(--font-titles);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hero__title--gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #006666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtítulo */
+.hero__subtitle {
+  font-size: 1.05rem;
+  color: #4A423A;
+  /* Tono cálido oscuro legible */
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+/* Botones de Acción (CTA) */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero__btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.hero__btn--primary:hover {
+  background-color: #009292;
+  transform: translateY(-2px);
+}
+
+.hero__btn--secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid rgba(26, 22, 18, 0.15);
+}
+
+.hero__btn--secondary:hover {
+  background-color: rgba(26, 22, 18, 0.04);
+  border-color: rgba(26, 22, 18, 0.3);
+  transform: translateY(-2px);
+}
+
+
+/* --- Columna Visual (Derecha) - Integración Libre y Flotante --- */
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Luces creativas de fondo (Glow Effects) */
+.hero__glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__glow--primary {
+  background-color: var(--color-primary);
+  top: -10%;
+  right: -10%;
+}
+
+.hero__glow--secondary {
+  background-color: #FF9F43;
+  /* Un toque naranja cálido complementario muy suave */
+  bottom: -10%;
+  left: -10%;
+}
+
+/* Contenedor del Mockup / Imagen de la interfaz */
+.hero__mockup-integrated {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatAnimation 5s ease-in-out infinite;
+  /* Micro-animación para que flote */
+}
+
+.hero__mockup-integrated img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  /* Evita que se corte o deforme */
+  /* La magia: La sombra se amolda a la silueta transparente del dispositivo, no a un cuadro */
+  filter: drop-shadow(0 25px 50px rgba(26, 22, 18, 0.09));
+}
+
+/* NUEVO: Animación orgánica de levitación */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  /* Sube sutilmente */
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 85px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 28px;
+  }
+
+  .hero__actions {
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+
+  /* Ajustado para el nuevo contenedor integrado */
+  .hero__mockup-integrated {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.85rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__btn {
+    width: 100%;
+  }
+}   

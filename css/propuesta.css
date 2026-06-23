@@ -1,0 +1,205 @@
+/* ── PROPUESTA DE VALOR — Salome ── */
+.prop-hibrida {
+  padding: 120px 24px;
+  background-color: var(--color-white); /* Fondo limpio, cero saturación */
+  position: relative;
+  overflow: hidden;
+}
+
+.proph__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Distribución exacta para evitar huecos vacíos gigantes */
+  grid-template-columns: 42% 52%;
+  gap: 6%;
+  align-items: start;
+}
+
+/* Lado Izquierdo Inteligentemente Flotante */
+.proph__intro {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px; /* Se queda quieto elegantemente mientras el usuario hace scroll en el timeline */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 20px;
+}
+
+.proph__tag {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary); /* Color turquesa de tu marca */
+  font-weight: 700;
+}
+
+.proph__main-title {
+  font-family: var(--font-titles);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.proph__main-desc {
+  font-size: 1.1rem;
+  color: #554D45;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Lado Derecho: Contenedor de la Línea de Tiempo */
+.proph__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Línea conectora minimalista trasera */
+.proph__timeline::before {
+  content: '';
+  position: absolute;
+  left: 27px; /* Alineado al centro exacto de los círculos */
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(0, 168, 168, 0.4), rgba(26, 22, 18, 0.06));
+  z-index: 1;
+}
+
+/* Estructura de cada Paso */
+.proph__step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 32px;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+  /* Transición sutil general */
+  transition: all 0.4s ease; 
+}
+
+.proph__step:first-child {
+  padding-top: 0;
+}
+
+.proph__step:last-child {
+  padding-bottom: 0;
+}
+
+/* Círculos numéricos interactivos */
+.proph__node-zone {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.proph__node {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-white);
+  border: 2px solid rgba(26, 22, 18, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titles);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8C8276;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Bloque de Textos del Paso */
+.proph__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px; /* Centrado visual con el círculo */
+  transition: transform 0.3s ease;
+}
+
+.proph__step-location {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+}
+
+.proph__step-title {
+  font-family: var(--font-titles);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.proph__step-text {
+  font-size: 1.05rem;
+  color: #4A423A;
+  line-height: 1.6;
+}
+
+/* ── ANIMACIONES Y MICRO-INTERACCIONES AL PASAR EL MOUSE ── */
+.proph__step:hover .proph__node {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(0, 168, 168, 0.2);
+}
+
+.proph__step:hover .proph__content {
+  transform: translateX(6px); /* El texto se mueve un poquito a la derecha para denotar foco */
+}
+
+/* ── ADAPTACIÓN TOTAL A MÓVILES (Responsive) ── */
+@media (max-width: 992px) {
+  .prop-hibrida {
+    padding: 80px 20px;
+  }
+
+  .proph__container {
+    grid-template-columns: 1fr; /* Una columna en tablets y teléfonos */
+    gap: 48px;
+  }
+
+  .proph__intro {
+    position: static; /* Desactivamos el efecto fijo en móviles */
+    padding-right: 0;
+  }
+
+  .proph__main-title {
+    font-size: 2.2rem;
+  }
+
+  .proph__timeline::before {
+    left: 20px; /* Ajustamos la línea a la izquierda */
+  }
+
+  .proph__step {
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .proph__node {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .proph__content {
+    padding-top: 4px;
+  }
+  
+  .proph__step:hover .proph__content {
+    transform: none; /* Evitamos comportamientos erráticos al presionar con el dedo */
+  }
+}
