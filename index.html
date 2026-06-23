@@ -1,59 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FarmaSync</title>
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/sections.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>FarmaSync</title>
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+     <link rel="stylesheet" href="css/styles.css" />
+     <link rel="stylesheet" href="css/sections.css" />
+     <link rel="stylesheet" href="css/animations.css" />
+     <link rel="stylesheet" href="css/navbar.css" />
+     <link rel="stylesheet" href="css/hero.css" />
+     <link rel="stylesheet" href="css/propuesta.css" />
+     <link rel="stylesheet" href="css/beneficios.css" />
+     <link rel="stylesheet" href="css/como-funciona.css" />
+     <link rel="stylesheet" href="css/faq.css" />
+     <link rel="stylesheet" href="css/footer.css" />
+
 </head>
+
 <body>
 
-  <!-- NAVBAR — Responsable: Salome
+     <!-- NAVBAR — Responsable: Salome
        -->
-  <nav class="navbar">
-  </nav>
+     <nav class="navbar" aria-label="Navegación principal">
+          <div class="navbar__inner">
+               <a href="#" class="navbar__logo">
+                    <img src="assets/img/logo.png"" alt=" FarmaSync Logo">
+                    <span>FarmaSync</span>
+               </a>
 
-  <!-- HERO — Responsable: Salome -->
-  <section id="hero">
-    <h1>hola</h1>
-  </section>
+               <div class="navbar__links">
+                    <a href="#propuesta">Propuesta</a>
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#como-funciona">Cómo funciona</a>
+                    <a href="#aliados">Farmacias Aliadas</a>
+                    <a href="#formulario">Contacto</a>
+               </div>
 
-  <!-- propuesta de valor — Responsable: 
+               <div class="navbar__actions">
+                    <a href="#" class="navbar__login">Iniciar Sesión</a>
+                    <a href="#" class="navbar__register">Registrarse</a>
+               </div>
+
+               <button class="navbar__toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </button>
+          </div>
+
+          <div class="navbar__mobile">
+               <a href="#propuesta">Propuesta</a>
+               <a href="#beneficios">Beneficios</a>
+               <a href="#como-funciona">Cómo funciona</a>
+               <a href="#aliados">Farmacias Aliadas</a>
+               <a href="#formulario">Contacto</a>
+               <hr class="navbar__divider">
+               <a href="#" class="navbar__login-mobile">Iniciar Sesión</a>
+               <a href="#" class="navbar__register-mobile">Registrarse</a>
+          </div>
+     </nav>
+
+     <!-- HERO — Responsable: Salome -->
+
+     <section id="hero" class="hero">
+          <div class="hero__container">
+
+               <div class="hero__content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero__badge">
+                         <span>Inspirados en tu salud, enfocados en tu bienestar.</span>
+                    </div>
+
+                    <h1 class="hero__title">
+                         Reserva tus medicamentos <span class="hero__title--gradient">a tiempo</span> con FarmaSync
+                    </h1>
+
+                    <p class="hero__subtitle">
+                         Evita filas, consulta la disponibilidad en tiempo real y asegura tus medicamentos en las
+                         farmacias más cercanas de forma rápida y segura.
+                    </p>
+
+                    <div class="hero__actions">
+                         <a href="#formulario" class="hero__btn hero__btn--primary">Reservar Ahora</a>
+                         <a href="#como-funciona" class="hero__btn hero__btn--secondary">Ver cómo funciona</a>
+                    </div>
+               </div>
+               <div class="hero__visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero__glow hero__glow--primary"></div>
+                    <div class="hero__glow hero__glow--secondary"></div>
+
+                    <div class="hero__mockup-integrated">
+                         <img src="assets/img/hero-mockup.png" alt="Interfaz interactiva de FarmaSync">
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- PROPUESTA DE VALOR HÍBRIDA — Responsable: Salome -->
+     <section id="propuesta" class="prop-hibrida">
+          <div class="proph__container">
+
+               <!-- LADO IZQUIERDO: Bloque de Texto Fijo (Referencia: image_c60dcd.png) -->
+               <div class="proph__intro" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="proph__tag">El efecto FarmaSync</span>
+                    <h2 class="proph__main-title">Pensado para hacerte la vida más fácil</h2>
+                    <p class="proph__main-desc">
+                         Eliminamos la incertidumbre y las barreras entre tú y tus medicamentos. Una experiencia
+                         diseñada desde la empatía, la claridad y el respeto por tu tiempo.
+                    </p>
+               </div>
+
+               <!-- LADO DERECHO: El Camino / Línea de Tiempo Vertical -->
+               <div class="proph__timeline">
+
+                    <!-- Paso 1 -->
+                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                         <div class="proph__node-zone">
+                              <div class="proph__node">1</div>
+                         </div>
+                         <div class="proph__content">
+                              <span class="proph__step-location">Desde tu hogar</span>
+                              <h3 class="proph__step-title">Consultas la disponibilidad</h3>
+                              <p class="proph__step-text">
+                                   Antes de planear tu día o gastar en transporte, abres FarmaSync y verificas en
+                                   segundos si tu farmacia asignada tiene el medicamento que te recetaron.
+                              </p>
+                         </div>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                         <div class="proph__node-zone">
+                              <div class="proph__node">2</div>
+                         </div>
+                         <div class="proph__content">
+                              <span class="proph__step-location">En tu teléfono</span>
+                              <h3 class="proph__step-title">Reservas con un solo toque</h3>
+                              <p class="proph__step-text">
+                                   Si está disponible, lo aseguras de inmediato. El sistema genera un código único de
+                                   reserva y guarda tus cajas exclusivamente para ti, evitando que se agoten mientras
+                                   viajas.
+                              </p>
+                         </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="proph__step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                         <div class="proph__node-zone">
+                              <div class="proph__node">3</div>
+                         </div>
+                         <div class="proph__content">
+                              <span class="proph__step-location">En la farmacia EPS</span>
+                              <h3 class="proph__step-title">Retiras por la ventanilla rápida</h3>
+                              <p class="proph__step-text">
+                                   Llegas al punto de entrega, te diriges directamente a la fila preferencial para
+                                   usuarios de la aplicación, muestras tu código y listo. Sin filas eternas ni
+                                   regresarte con las manos vacías.
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+
+          </div>
+     </section>
+     <!-- BENEFICIOS — Responsable: Kevin
         -->
-  <section id="propuesta">
-  </section>
+     <section id="beneficios">
+     </section>
 
-  <!-- BENEFICIOS — Responsable: Kevin
+     <!-- CÓMO FUNCIONA — Responsable: 
+       -->
+     <section id="como_funciona">
+     </section>
+
+     <!-- PRUEBA SOCIAL — Responsable: 
+       -->
+     <section id="prueba_social">
+     </section>
+
+     <!-- FAQ — Responsable: Nikoll 
+       -->
+     <section id="faq">
+     </section>
+
+     <!-- FOOTER — Responsable: 
         -->
-  <section id="beneficios">
-  </section>
+     <footer id="footer">
+     </footer>
 
-  <!-- CÓMO FUNCIONA — Responsable: 
-       -->
-  <section id="como_funciona">
-  </section>
-
-  <!-- PRUEBA SOCIAL — Responsable: 
-       -->
-  <section id="prueba_social">
-  </section>
-
-  <!-- FAQ — Responsable: Nikoll 
-       -->
-  <section id="faq">
-  </section>
-
-  <!-- FOOTER — Responsable: 
-        -->
-  <footer id="footer">
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/main.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="js/animations.js"></script>
+     <script src="js/main.js"></script>
 </body>
+
 </html>
