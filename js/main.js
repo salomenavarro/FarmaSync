@@ -20,7 +20,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
- // Navbar: Control del efecto Scroll
+  // ============================================
+  // NAVBAR: Control del efecto Scroll (Salome)
+  // ============================================
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', () => {
@@ -28,7 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Navbar: Control del Menú Móvil e Inclusión de estados accesibles
+  // ============================================
+  // FAQ: Control de Acordeones (Nikoll)
+  // ============================================
+  const faqCards = document.querySelectorAll(".faq-card");
+  faqCards.forEach(card => {
+    const button = card.querySelector(".faq-toggle");
+    if (button) {
+      button.addEventListener("click", () => {
+        card.classList.toggle("active");
+      });
+    }
+  });
+
+  // ============================================
+  // NAVBAR: Control del Menú Móvil (Salome)
+  // ============================================
   const toggle = document.querySelector('.navbar__toggle');
   const mobileMenu = document.querySelector('.navbar__mobile');
 
